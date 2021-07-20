@@ -1,0 +1,33 @@
+<!-- Data Template, inheriting from base_template. Use of Bootstrap CSS framework -->
+{% extends "BeamishA1_app/base_template.html" %}
+{% load static %}
+{% block page_title %}
+Data Dictionary
+{% endblock %}
+{% block content1 %}
+<br><br>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Type</th>
+      <th scope="col">Size</th>
+      <th scope="col">Constraints</th>
+      <th scope="col">Description</th>
+      <th scope="col">Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for data in dict_list %}
+    <tr>
+      <th scope="row">{{data.name}}</th>
+      <td>{{data.type}}</td>
+      <td>{{data.size}}</td>
+      <td>{{data.constraints}}</td>
+      <td>{{data.description}}</td>
+      <td>{{data.example}}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

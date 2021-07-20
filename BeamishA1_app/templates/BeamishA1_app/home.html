@@ -1,0 +1,24 @@
+<!-- Home Template, inheriting from base_template. Use of Bootstrap CSS framework -->
+{% extends "BeamishA1_app/base_template.html" %}
+{% load static %}
+{% block content1 %}
+<div class="container" style="margin-top:30px">
+  <div class="row">
+    <div class="col-sm-8">
+      <h2>Drill Specialist turns Software Developer</h2>
+      <h5>James Stephen Beamish s324587</h5>
+      <p>
+        It is my hope to soon be able to make a transition into the world of software engineering, and in doing so
+        be able to pack my tools away for good.<br>
+        This catalogue is an initial attempt at creating a record of all my mechanical and auto-electrical tooling.<br>
+        For the purposes of this assignment, it will present details of 10 tools. These details will include:<br>
+      </p>
+      {{datatopics|unordered_list}}
+      <hr class="d-sm-none">
+    </div>
+    <div class="col-sm-4">
+      <img src="/static/images/JamesTigerKing.JPG" class="rounded-circle">
+    </div>
+  </div>
+</div>
+{% endblock %}

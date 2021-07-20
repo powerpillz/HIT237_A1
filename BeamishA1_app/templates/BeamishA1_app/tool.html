@@ -1,0 +1,38 @@
+<!-- Individual Tool Template, inheriting from base_template. Use of Bootstrap CSS framework -->
+{% extends "BeamishA1_app/base_template.html" %}
+{% load static %}
+{% block content1 %}
+<br><br>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">Cat #</th>
+      <th scope="col">Name</th>
+      <th scope="col">Type of Tool</th>
+      <th scope="col">Description</th>
+      <th scope="col">Brand</th>
+      <th scope="col">Cost</th>
+      <th scope="col"># Pieces</th>
+      <th scope="col">Date Purchased</th>
+      <th scope="col">Purchased Secondhand?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">{{tool.tool_id}}</th>
+      <td>{{tool.name}}</td>
+      <td>{{tool.type}}</td>
+      <td>{{tool.description}}</td>
+      <td>{{tool.brand}}</td>
+      <td>${{tool.cost}}</td>
+      <td>{{tool.pieces}}</td>
+      <td>{{tool.date_of_purchase}}</td>
+      <td>{{tool.secondhand}}</td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<div>
+  <img src="{{tool.imagedir}}" class="mx-auto d-block">
+</div>
+{% endblock %}
